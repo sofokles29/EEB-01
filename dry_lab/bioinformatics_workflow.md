@@ -19,6 +19,7 @@ What it does?
 - Runs FastQC on trimmed outputs
 
 **Map transcripts to brown bear genome (STAR)**
+
 Using v2.7.10b of STAR, trimmed reads were mapped to the bear genome brown bear reference genome assembly NCBI GCF_023065955.2, and only uniquely mapped reads were kept and then converted to BAM files.
 
 `STAR \
@@ -33,6 +34,7 @@ Using v2.7.10b of STAR, trimmed reads were mapped to the bear genome brown bear 
 --outSAMtype BAM SortedByCoordinate`
 
 **Quantify gene counts (featureCounts)**
+
 Gene-level read counts were then quantified using featureCounts from Subread v1.6.3
 
 `featureCounts -p -F 'GTF' -T 8 -t exon -g gene_id -a [path/to/GTF] -o [outfile.txt] [path/to/sorted/bam/files/*.bam]
