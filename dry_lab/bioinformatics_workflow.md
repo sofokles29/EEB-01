@@ -45,7 +45,6 @@ Gene-level read counts were then quantified using featureCounts from Subread v1.
 
 
 
-
 **Differential Gene Expression Analysis (DESeq2) -> Exploratory Analysis Variance Stabilizing Transformation (VST) -> PCA -> heatmap -> Gene Ontology and KEGG Enrichment Analysis -> Gene Set Enrichment Analysis -> Over-representation Analysis**
 
 
