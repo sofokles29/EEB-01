@@ -1,11 +1,11 @@
 # Downloading SRA 
-## What is the SRA?
-**Sequence Read Archive (SRA) is a giant library of raw DNA and RNA sequencing data**
+**What is the SRA?**
+Sequence Read Archive (SRA) is a giant library of raw DNA and RNA sequencing data
 
-# Purpose
+## Purpose
 To provide a centralized, publicly accessible repository for storing and sharing raw sequencing data, enabling transparency, reproducibility, and the reuse of genomic data for further research and comparative analyses.
 
-# Function
+## Function
 SRA files are containers for raw sequencing reads. They are highly compressed, hence why we can’t just download fastq files directly. To get data from the SRA, we use two tools:  
 
 `prefetch`
@@ -16,7 +16,7 @@ SRA files are containers for raw sequencing reads. They are highly compressed, h
 - Each read has a name, DNA sequence, and quality score
 
 
-# Usage
+## Usage
 A SLURM script is a shell script used to submit jobs to the computer cluster and tells the cluster what resources your job needs and what commands to run.
 It automates and manages tasks like…
 - Requesting CPUs, memory, and time
