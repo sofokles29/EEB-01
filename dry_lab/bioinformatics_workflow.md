@@ -40,8 +40,8 @@ Using v2.7.10b of STAR, trimmed reads were mapped to the bear genome brown bear 
 
 Gene-level read counts were then quantified using featureCounts from Subread v1.6.3
 
-```featureCounts -p -F 'GTF' -T 8 -t exon -g gene_id -a [path/to/GTF] -o [outfile.txt] [path/to/sorted/bam/files/*.bam]
-```
+
+
 
 
 **Differential Gene Expression Analysis (DESeq2) -> Exploratory Analysis Variance Stabilizing Transformation (VST) -> PCA -> heatmap -> Gene Ontology and KEGG Enrichment Analysis -> Gene Set Enrichment Analysis -> Over-representation Analysis**
