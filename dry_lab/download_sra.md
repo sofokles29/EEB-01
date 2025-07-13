@@ -25,9 +25,9 @@ It automates and manages tasks like…
 - Running jobs in parallel aka arrays
 
 
-`#!/bin/bash
+```#!/bin/bash
 
-#SBATCH --job-name=myjob           `# Name of the job
+#SBATCH --job-name=myjob           # Name of the job
 #SBATCH --mail-type=ALL               # Mail events
 #SBATCH --mail-user=USCSID@ucsc.edu   # Where to send mail 
 #SBATCH --output=output_%j.txt     # Standard output (%j = job ID)
@@ -35,25 +35,25 @@ It automates and manages tasks like…
 #SBATCH --time=01:00:00            # Time limit (hh:mm:ss)
 #SBATCH --partition=128x24      # Partition/queue name
 #SBATCH --ntasks=1                 # Number of tasks → run on a single CPU
-#SBATCH --mem=250M`              	  # Memory per node → 250 megabytes`
-
+#SBATCH --mem=250M              	  # Memory per node → 250 megabytes
+```
 
 **For SRA:**
 
-`#!/bin/bash`
+```#!/bin/bash
 
-`#SBATCH --job-name=getSRA`    			`# Job name`
-`#SBATCH --partition=128x24`			`# Partition name`
-`#SBATCH --mail-type=ALL`               		`# Mail events (NONE, BEGIN, END, FAIL, ALL)`
-`#SBATCH --mail-user=UCSC_ID@ucsc.edu`   	`# Where to send mail`
-`#SBATCH --time=0-05:00:00` 				`# Wall clock time limit in Days-Hours:min:seconds`
-`#SBATCH --ntasks=1`                    		`# Run a single task`
-`#SBATCH --cpus-per-task=4`                  	`# Use 4 threads for fasterq-dump`
-`#SBATCH --output=scripts/logs/fasterq-dump_%j.out`    `# Standard output and error log`
-`#SBATCH --error=scripts/logs/fasterq-dump_%j.err`     `# Standard output and error log`
-`#SBATCH --mem=8G`                    		`# Allocate memory for the job.`
-`#SBATCH --array=1-11`					`# array job`
-
+#SBATCH --job-name=getSRA    		  	# Job name
+#SBATCH --partition=128x24			      # Partition name
+#SBATCH --mail-type=ALL              		# Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=UCSC_ID@ucsc.edu   	# Where to send mail
+#SBATCH --time=0-05:00:00 				    # Wall clock time limit in Days-Hours:min:seconds
+#SBATCH --ntasks=1                    		# Run a single task
+#SBATCH --cpus-per-task=4                  	# Use 4 threads for fasterq-dump
+#SBATCH --output=scripts/logs/fasterq-dump_%j.out    # Standard output and error log
+#SBATCH --error=scripts/logs/fasterq-dump_%j.err     # Standard output and error log
+#SBATCH --mem=8G                    		# Allocate memory for the job.
+#SBATCH --array=1-11					       # array job
+```
 
 
 
