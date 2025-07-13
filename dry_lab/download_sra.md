@@ -27,7 +27,7 @@ It automates and manages tasks like…
 
 `#!/bin/bash
 
-#SBATCH --job-name=myjob           # Name of the job
+#SBATCH --job-name=myjob           `# Name of the job
 #SBATCH --mail-type=ALL               # Mail events
 #SBATCH --mail-user=USCSID@ucsc.edu   # Where to send mail 
 #SBATCH --output=output_%j.txt     # Standard output (%j = job ID)
@@ -35,7 +35,7 @@ It automates and manages tasks like…
 #SBATCH --time=01:00:00            # Time limit (hh:mm:ss)
 #SBATCH --partition=128x24      # Partition/queue name
 #SBATCH --ntasks=1                 # Number of tasks → run on a single CPU
-#SBATCH --mem=250M              	  # Memory per node → 250 megabytes`
+#SBATCH --mem=250M`              	  # Memory per node → 250 megabytes`
 
 
 **For SRA:**
