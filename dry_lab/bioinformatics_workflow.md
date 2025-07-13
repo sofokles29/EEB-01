@@ -5,7 +5,14 @@ Hibernation in brown bears (Ursus arctos) includes major physiological changes, 
 The main goal of this project is to identify which genes change between active and hibernating seasons in adipose (fat) and explore why those changes happen.
 
 ## Bioinformatics Pipeline
-**Quality trimming (Trim Galore) -> Map transcripts to brown bear genome (STAR) -> Quantify gene counts (featureCounts)**
+**Quality trimming (Trim Galore)**
+Raw reads were quality trimmed using TrimGalore v0.6.10
+'trim_galore --paired -q 24 --fastqc --fastqc_args "--noextract --nogroup --outdir 1_trim/fastqc" --stringency 5 --illumina --length 50
+-o 1_trim --clip_R1 12 --clip_R2 12 [path/to/read1] [path/to/read2]'
+
+Map transcripts to brown bear genome (STAR) -> Quantify gene counts (featureCounts)**
+
+
 
 **Differential Gene Expression Analysis (DESeq2) -> Exploratory Analysis Variance Stabilizing Transformation (VST) -> PCA -> heatmap -> Gene Ontology and KEGG Enrichment Analysis -> Gene Set Enrichment Analysis -> Over-representation Analysis**
 
