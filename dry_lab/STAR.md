@@ -102,7 +102,7 @@ Researchers use STAR after trimming and quality control of RNA-Seq data. The too
 --outSAMtype BAM SortedByCoordinate
 ```
 
-*Explanation*
+*Explanation of lines we typed in:*
 
 --outFilterMultimapNmax
 Read alignments will be output only if the read maps is less or equal than this value, otherwise no alignments will be output
