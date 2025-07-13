@@ -38,9 +38,9 @@ It automates and manages tasks like…
 #SBATCH --mem=250M              	  # Memory per node → 250 megabytes`
 
 
-**For SRA**
+**For SRA:**
 
-`#!/bin/bash
+``#!/bin/bash
 
 #SBATCH --job-name=getSRA    			# Job name
 #SBATCH --partition=128x24				# Partition name
@@ -52,7 +52,7 @@ It automates and manages tasks like…
 #SBATCH --output=scripts/logs/fasterq-dump_%j.out    # Standard output and error log
 #SBATCH --error=scripts/logs/fasterq-dump_%j.err     # Standard output and error log
 #SBATCH --mem=8G                    		# Allocate memory for the job.
-#SBATCH --array=1-11					# array job`
+#SBATCH --array=1-11					# array job``
 
 
 
