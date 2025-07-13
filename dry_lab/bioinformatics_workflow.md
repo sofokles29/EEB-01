@@ -41,7 +41,9 @@ Gene-level read counts were then quantified using featureCounts from Subread v1.
 `
 
 
+
 **Differential Gene Expression Analysis (DESeq2) -> Exploratory Analysis Variance Stabilizing Transformation (VST) -> PCA -> heatmap -> Gene Ontology and KEGG Enrichment Analysis -> Gene Set Enrichment Analysis -> Over-representation Analysis**
+
 
 The experimental workflow used to investigate gene expression changes in brown bears during different physiological states involves a combination of wet lab procedures and bioinformatics analyses. The process begins with the collection of adipose tissue samples from male and female bears in two conditions: active season and hibernation. From these adipose tissue samples, RNA is extracted and prepared for bulk RNA sequencing (RNA-Seq) to analyze the transcriptome comprehensively.
 
