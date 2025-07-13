@@ -8,11 +8,35 @@ The main goal of this project is to identify which genes change between active a
 **Quality trimming (Trim Galore)**
 Raw reads were quality trimmed using TrimGalore v0.6.10
 
-```trim_galore --paired -q 24 --fastqc --fastqc_args "--noextract --nogroup --outdir 1_trim/fastqc" --stringency 5 --illumina --length 50
--o 1_trim --clip_R1 12 --clip_R2 12 [path/to/read1] [path/to/read2]```
+`trim_galore --paired -q 24 --fastqc --fastqc_args "--noextract --nogroup --outdir 1_trim/fastqc" --stringency 5 --illumina --length 50
+-o 1_trim --clip_R1 12 --clip_R2 12 [path/to/read1] [path/to/read2]`
 
-Map transcripts to brown bear genome (STAR) -> Quantify gene counts (featureCounts)**
+What it does?
+- Trims adapter sequences (Illumina-specific)
+- Removes low-quality ends (Q < 24)
+- Clips first 12 bp of each read (R1 & R2)
+- Discards short reads (< 50 bp)
+- Runs FastQC on trimmed outputs
 
+**Map transcripts to brown bear genome (STAR)**
+Using v2.7.10b of STAR, trimmed reads were mapped to the bear genome brown bear reference genome assembly NCBI GCF_023065955.2, and only uniquely mapped reads were kept and then converted to BAM files.
+
+`STAR \
+--runThreadN 12 \
+--genomeDir path/to/directory \
+--sjdbGTFfile ./star/ursus_arctos.gtf \
+--sjdbOverhang 100 \
+--outFilterMultimapNmax 1 \
+--readFilesIn path/to/fastq path/to/fastq \
+--twopassMode Basic \
+--outFileNamePrefix path/to/directory
+--outSAMtype BAM SortedByCoordinate`
+
+**Quantify gene counts (featureCounts)**
+Gene-level read counts were then quantified using featureCounts from Subread v1.6.3
+
+`featureCounts -p -F 'GTF' -T 8 -t exon -g gene_id -a [path/to/GTF] -o [outfile.txt] [path/to/sorted/bam/files/*.bam]
+`
 
 
 **Differential Gene Expression Analysis (DESeq2) -> Exploratory Analysis Variance Stabilizing Transformation (VST) -> PCA -> heatmap -> Gene Ontology and KEGG Enrichment Analysis -> Gene Set Enrichment Analysis -> Over-representation Analysis**
