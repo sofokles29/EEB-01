@@ -1,16 +1,22 @@
 # Downloading SRA
 ## What is the SRA?
 **Sequence Read Archive (SRA) is a giant library of raw DNA and RNA sequencing data**
-SRA files are containers for raw sequencing reads. They are highly compressed, hence why we can’t just download fastq files directly. To get data from the SRA, we use two tools:  
 
 # Purpose
+to provide a centralized, publicly accessible repository for storing and sharing raw sequencing data, enabling transparency, reproducibility, and the reuse of genomic data for further research and comparative analyses.
 
 # Function
+SRA files are containers for raw sequencing reads. They are highly compressed, hence why we can’t just download fastq files directly. To get data from the SRA, we use two tools:  
+
+
+
+
 
 # Usage
 
 
-What is a fastq file?
+
+## What is a fastq file?
 Files we get from the sequencing companies that include DNA sequences and the quality score that associates with them
 They come in specific 4-line format which includes a header line, a line of sequence, a +, and then the quality scores
 prefetch
