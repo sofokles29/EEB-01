@@ -106,6 +106,7 @@ Researchers use STAR after trimming and quality control of RNA-Seq data. The too
 
 --outFilterMultimapNmax
 Read alignments will be output only if the read maps is less or equal than this value, otherwise no alignments will be output
+
 --twopassMode Basic
 In the 2-pass mapping job, STAR will map the reads twice. In the 1st pass, the novel junctions will be detected and inserted into the genome indices
 In the 2nd pass, all reads will be re-mapped using annotated (from the GTF file) and novel (detected in the 1st pass) junctions.
