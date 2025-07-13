@@ -42,3 +42,19 @@ We used this command:
 --clip_R2 12: Removes the first 12 bases of Read 2.
 
 [path/to/read1] [path/to/read2]: Input raw FASTQ files from NCBI.
+
+## SLURM script to run TrimGalore
+```#!/bin/bash
+
+#SBATCH --job-name=trimgalore  			# Job name
+#SBATCH --partition=128x24				# Partition name
+#SBATCH --mail-type=ALL               		# Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=smallinu@ucsc.edu   	# Where to send mail
+#SBATCH --time=0-05:00:00 				# Wall clock time limit in Days-Hours:min:seconds
+#SBATCH --ntasks=1                    		# Run a single task
+#SBATCH --cpus-per-task=1                  	# Use 4 threads for fasterq-dump
+#SBATCH --output=/hb/groups/sip_eeb_01/sofie/scripts/logs/trimgalore_%j.out    # Standard output and error log
+#SBATCH --error=/hb/groups/sip_eeb_01/sofie/scripts/logs/trimgalore_%j.err     # Standard output and error log
+#SBATCH --mem=8G                    		# Allocate memory for the job.
+#SBATCH --array=1-11					# array job
+```
