@@ -1,5 +1,6 @@
 # Downloading SRA 
 **What is the SRA?**
+
 Sequence Read Archive (SRA) is a giant library of raw DNA and RNA sequencing data
 
 ## Purpose
