@@ -7,8 +7,8 @@ The main goal of this project is to identify which genes change between active a
 ## Bioinformatics Pipeline
 **Quality trimming (Trim Galore)**
 Raw reads were quality trimmed using TrimGalore v0.6.10
-'trim_galore --paired -q 24 --fastqc --fastqc_args "--noextract --nogroup --outdir 1_trim/fastqc" --stringency 5 --illumina --length 50
--o 1_trim --clip_R1 12 --clip_R2 12 [path/to/read1] [path/to/read2]'
+`trim_galore --paired -q 24 --fastqc --fastqc_args "--noextract --nogroup --outdir 1_trim/fastqc" --stringency 5 --illumina --length 50
+-o 1_trim --clip_R1 12 --clip_R2 12 [path/to/read1] [path/to/read2]`
 
 Map transcripts to brown bear genome (STAR) -> Quantify gene counts (featureCounts)**
 
