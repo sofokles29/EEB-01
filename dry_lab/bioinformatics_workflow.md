@@ -24,6 +24,10 @@ What it does?
 
 Using v2.7.10b of STAR, trimmed reads were mapped to the bear genome brown bear reference genome assembly NCBI GCF_023065955.2, and only uniquely mapped reads were kept and then converted to BAM files.
 
+```featureCounts -p -F 'GTF' -T 8 -t exon -g gene_id -a [path/to/GTF] -o [outfile.txt] [path/to/sorted/bam/files/*.bam]
+```
+
+
 ```STAR \
 --runThreadN 12 \
 --genomeDir path/to/directory \
